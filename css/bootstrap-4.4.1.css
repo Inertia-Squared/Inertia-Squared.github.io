@@ -64,7 +64,13 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+    		scrollbar-width: none; /* for Firefox */
+    		overflow-y: scroll; 
 }
+body::-webkit-scrollbar {
+    		display: none; /* for Chrome, Safari, and Opera */
+		}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
