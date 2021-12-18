@@ -1,7 +1,6 @@
-
 const canvas = document.getElementById('canvas')
 const c = canvas.getContext('2d')
-const nav = document.getElementById("navigation")
+const nav = document.getElementById("mainNav")
 var width = innerWidth
 var height = innerHeight
 canvas.width = width - width/8
