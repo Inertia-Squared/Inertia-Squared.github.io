@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <script src="//code.jquery.com/jquery.min.js"></script>
+    <title>Bootstrap - Prebuilt Layout</title>
+
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
     <link href="webfonts/Game_Of_Squids/stylesheet.css" rel="stylesheet" type="text/css">
@@ -32,17 +32,50 @@
     		margin: auto;
 		}
 		
+		#video-background {
+    		top: 0;
+    		left: 0;
+    		position: absolute;
+    		width: 100%;
+    		height: 100%;
+    		background-repeat: repeat;
+    		overflow: visible;
+		}
+		
 	</style>
 <body style="background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
 	
-	<!-- Universal Navbar Code --> 
-	<div id="navigation"></div>
-    <script>
-		$(function(){
-			$("#navigation").load("nav.html");
-		});
-	</script>
-	<!-- End of Universal Navbar Code --> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+       <a class="navbar-brand" href="#">Navbar</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+             </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="#">Action</a>
+                   <a class="dropdown-item" href="#">Another action</a>
+                   <div class="dropdown-divider"></div>
+                   <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+			  </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+       </div>
+    </nav>
 	
 	<div style="text-align: center">
 	<div id="canvasText" style="position: absolute;left: 9%; margin: 0 auto">
@@ -58,27 +91,30 @@
 	</div>
 	
 	
-<div class="jumbotron jumbotron-fluid text-center" id="canvasSpacer">
+    <div class="jumbotron jumbotron-fluid text-center" id="canvasSpacer">
 <hr class="my-4">
-   <p style="font-family: 'Open Sans'; font-style: normal; font-weight: 400;">Hi there! I'm a programming enthusiast who lives in NSW, Australia. If you want to know more about who I am and what I do, you're at the right place!&nbsp;</p>
-   <p class="lead">
-     <a class="btn btn-primary btn-lg" href="about.html" role="button">More About Me</a>
-  </p>
+       <p style="font-family: 'Open Sans'; font-style: normal; font-weight: 400;">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+       <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
     </div>
     <div class="container">
+       <div class="row text-center">
+          <div class="col-lg-6 offset-lg-3"><strong>&nbsp;</strong> </div>
+       </div>
        <br>
        <hr>
        <br>
        <div class="row">
           <div class="col-md-4">
              <div class="card">
-               <img class="card-img-top" src="images/mandelbrot.png" alt="Card image cap">
+                <img class="card-img-top" src="images/card-img.png" alt="Card image cap">
                 <div class="card-body">
-                   <h4 class="card-title">Rasterising the Mandelbrot Set</h4>
-                   <p class="card-text">This Java project was developed for a school assignmen on fractals. The program can raster a variety of recursive formulas on the complex plane, generating gorgeous fractals.</p>
-                   <br>
-                   <a href="https://github.com/iGamingMango/complexFractals" class="btn btn-primary">See the project on GitHub</a>
-               </div>
+                   <h4 class="card-title">Card title</h4>
+                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                   <br><br>
+                   <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
              </div>
           </div>
           <div class="col-md-4">
@@ -124,7 +160,7 @@
        </div>
        <br/>
        <br/>
-       <div class="row light">
+       <div class="row">
           <div class=" col-md-4"> Click here to select this<strong> column.</strong> Always place your content within a column. Columns are indicated by a dashed blue line. </div>
           <div class="col-md-4 "> You can <strong>resize a column</strong> using the handle on the right. Drag it to increase or reduce the number of columns.</div>
           <div class="col-md-4 "> You can <strong>offset a column</strong> using the handle on the left. Drag it to increase or reduce the offset. </div>
@@ -154,18 +190,18 @@
        </div>
        <br>
        <hr>
-       <div class="row light">
+       <div class="row">
           <div class="text-center col-lg-6 offset-lg-3">
              <h4>Footer </h4>
-             <p>Copyright &copy; 2021 &middot; All Rights Reserved</p>
+             <p>Copyright &copy; 2020 &middot; All Rights Reserved &middot; <a href="#" >My Website</a></p>
           </div>
        </div>
     </div>
 	 <script src="index.js"></script>
-  </body>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed --> 
     <script src="js/popper.min.js"></script>
   <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
 </html>
