@@ -88,7 +88,7 @@ document.addEventListener("click", () => {
 	friction-=0.0032
 		sqrtl=Math.sqrt(part.length/1.25)
 	}else{
-		for(let i = 0; i < 30; i++) {
+		for(let i = 0; i < 31; i++) {
 			part.pop()
 			friction+=0.0032
 		}
