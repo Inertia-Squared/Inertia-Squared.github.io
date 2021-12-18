@@ -1,0 +1,7 @@
+@font-face {
+	font-family: 'BebasNeue Regular';
+	src: url('BebasNeue-Regular.eot');
+	src: url('BebasNeue-Regular.eot?#iefix') format('embedded-opentype'),
+		url('BebasNeue-Regular.woff') format('woff'),
+		url('BebasNeue-Regular.ttf') format('truetype');
+}

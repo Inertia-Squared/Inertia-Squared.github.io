@@ -1,3 +1,4 @@
+@import url("../../webfonts/OpenSans_Regular/stylesheet.css");
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -79,8 +80,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "OpenSans Italic VariableFont wdth", wght;
 }
 
 abbr[title],
