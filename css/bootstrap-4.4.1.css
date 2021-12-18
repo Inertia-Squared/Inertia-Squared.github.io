@@ -32,7 +32,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Open Sans",-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -52,6 +52,8 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
+
+
 
 body {
   margin: 0;
@@ -82,7 +84,8 @@ h1, h2, h3, h4, h5, h6 {
 p {
     margin-top: 0;
     margin-bottom: 1rem;
-    font-family: "OpenSans Italic VariableFont wdth", wght;
+    font-family: "Open Sans", wght;
+	font-size: 0.9rem;
 }
 
 abbr[title],
@@ -369,19 +372,19 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }
 
 h3, .h3 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 h4, .h4 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 h5, .h5 {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 h6, .h6 {
@@ -552,7 +555,7 @@ pre code {
 }
 
 @media (min-width: 576px) {
-  .container {
+  .container
     max-width: 540px;
   }
 }
@@ -10224,3 +10227,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+.light{
+  color: aliceblue;	
+}
