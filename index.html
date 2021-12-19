@@ -1,172 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <script src="//code.jquery.com/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <link href="webfonts/Game_Of_Squids/stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="webfonts/OpenSans_Regular/stylesheet.css" rel="stylesheet" type="text/css">
-    <link href="webfonts/BebasNeue_Regular/stylesheet.css" rel="stylesheet" type="text/css">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="webfonts/Game_Of_Squids/stylesheet.css" rel="stylesheet" type="text/css">
+<link href="webfonts/OpenSans_Regular/stylesheet.css" rel="stylesheet" type="text/css">
+<link href="webfonts/BebasNeue_Regular/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
 
-  </head>
-	<style>
-		body{
-			-ms-overflow-style: none; /* for Internet Explorer, Edge */
-    		scrollbar-width: none; /* for Firefox */
-    		overflow-y: scroll; 
-		}
-		body::-webkit-scrollbar {
-    		display: none; /* for Chrome, Safari, and Opera */
-		}
-		
-		centerme {
-    		position: absolute;
-    		top: 0;
-    		left: 0;
-    		right: 0;
-    		bottom: 0;
-    		margin: auto;
-		}
-		
-	</style>
 <body style="background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
-	
-	<!-- Universal Navbar Code --> 
-	<div id="navigation"></div>
-    <script>
+
+<!-- Universal Navbar Code -->
+<div id="navigation"></div>
+<script>
 		$(function(){
 			$("#navigation").load("nav.html");
 		});
-	</script>
-	<!-- End of Universal Navbar Code --> 
-	
-	<div style="text-align: center">
-	<div id="canvasText" style="position: absolute;left: 9%; margin: 0 auto">
-		
-			<br>
-	 		<h1 id="tx" style="overflow: visible; color: #6C747C; text-shadow: 3px 3px #343A40; font-size: 7.5vw; font-family: 'Game Of Squids';">Oliver Middleton</h1>
-			<h2 style="color: #4F575E; font-style: italic; font-size: 3.1vw; font-family: 'BebasNeue Regular';">Programmer, Maths Nerd &amp; Mango Enjoyer</h2>
-			<h5 style="color: #4F575E; text-shadow: 1px 1px #1A1F24; font-size: 2vw; font-style: normal; font-family: 'BebasNeue Regular'; font-weight: 400;" id="clickme">(click somewhere!)</h5>
-		
-	</div>
-	<canvas id="canvas" style="position: absolute; z-index: 1; outline: 3px solid #343A40"></canvas>
-	<canvas id="spacer" style="background-color: #121B25"></canvas>
-	</div>
-	
-	
+	</script> 
+<!-- End of Universal Navbar Code -->
+
+<div style="text-align: center">
+  <div id="canvasText" style="position: absolute;left: 9%; margin: 0 auto"> <br>
+    <h1 id="tx" style="overflow: visible; color: #6C747C; text-shadow: 3px 3px #343A40; font-size: 7.5vw; font-family: 'Game Of Squids';">Oliver Middleton</h1>
+    <h2 style="color: #4F575E; font-style: italic; font-size: 3.1vw; font-family: 'BebasNeue Regular';">Programmer, Maths Nerd &amp; Mango Enjoyer</h2>
+    <h5 style="color: #4F575E; text-shadow: 1px 1px #1A1F24; font-size: 2vw; font-style: normal; font-family: 'BebasNeue Regular'; font-weight: 400;" id="clickme">(click somewhere!)</h5>
+  </div>
+  <canvas id="canvas" style="position: absolute; z-index: 1; outline: 3px solid #343A40"></canvas>
+  <canvas id="spacer" style="background-color: #121B25"></canvas>
+</div>
 <div class="jumbotron jumbotron-fluid text-center" id="canvasSpacer">
-<hr class="my-4">
-   <p style="font-family: 'Open Sans'; font-style: normal; font-weight: 400;">Hi there! I'm a programming enthusiast who lives in NSW, Australia. If you want to know more about who I am and what I do, you're at the right place!&nbsp;</p>
-   <p class="lead">
-     <a class="btn btn-primary btn-lg" href="about.html" role="button">More About Me</a>
-  </p>
+  <hr class="my-4">
+  <p style="font-family: 'Open Sans'; font-style: normal; font-weight: 400;">Hi there! I'm a programming enthusiast who lives in NSW, Australia. If you want to know more about who I am and what I do, you're at the right place!&nbsp;</p>
+  <p class="lead"> <a class="btn btn-primary btn-lg" href="about.html" role="button">More About Me</a> </p>
+</div>
+<div class="container"> <br>
+  <hr>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card"> <img class="card-img-top" src="resources/images/mandelbrot.png" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Rasterising the Mandelbrot Set</h4>
+          <p class="card-text">This Java project was developed for a school assignment on fractals. The program can raster a variety of recursive formulas on the complex plane, generating gorgeous fractals.</p>
+          <br>
+          <a href="https://github.com/iGamingMango/complexFractals" class="btn btn-primary">See the project on GitHub</a> </div>
+      </div>
     </div>
-    <div class="container">
-       <br>
-       <hr>
-       <br>
-       <div class="row">
-          <div class="col-md-4">
-             <div class="card">
-               <img class="card-img-top" src="images/mandelbrot.png" alt="Card image cap">
-                <div class="card-body">
-                   <h4 class="card-title">Rasterising the Mandelbrot Set</h4>
-                   <p class="card-text">This Java project was developed for a school assignmen on fractals. The program can raster a variety of recursive formulas on the complex plane, generating gorgeous fractals.</p>
-                   <br>
-                   <a href="https://github.com/iGamingMango/complexFractals" class="btn btn-primary">See the project on GitHub</a>
-               </div>
-             </div>
-          </div>
-          <div class="col-md-4">
-             <div class="card">
-                <div class="card-body">
-                   <h5 class="card-title">Card title</h5>
-                   <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   <a href="#" class="card-link">Card link</a>
-                   <a href="#" class="card-link">Another link</a>
-                </div>
-             </div>
-             <br>
-             <br/>
-             <div class="card">
-                <div class="card-header">
-                   Featured
-                </div>
-                <ul class="list-group list-group-flush">
-                   <li class="list-group-item">Cras justo odio</li>
-                   <li class="list-group-item">Dapibus ac facilisis in</li>
-                   <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
-             </div>
-          </div>
-          <div class="col-md-4">
-             <div class="card">
-                <img class="card-img-top" src="images/card-img.png" alt="Card image cap">
-                <div class="card-body">
-                   <h5 class="card-title">Card title</h5>
-                   <p class="card-text">Some text to build on the card's content.</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                   <li class="list-group-item">Cras justo odio</li>
-                   <li class="list-group-item">Dapibus ac facilisis in</li>
-                </ul>
-                <div class="card-body">
-                   <a href="#" class="card-link">Card link</a>
-                   <a href="#" class="card-link">Another link</a>
-                </div>
-             </div>
-          </div>
-       </div>
-       <br/>
-       <br/>
-       <div class="row light">
-          <div class=" col-md-4"> Click here to select this<strong> column.</strong> Always place your content within a column. Columns are indicated by a dashed blue line. </div>
-          <div class="col-md-4 "> You can <strong>resize a column</strong> using the handle on the right. Drag it to increase or reduce the number of columns.</div>
-          <div class="col-md-4 "> You can <strong>offset a column</strong> using the handle on the left. Drag it to increase or reduce the offset. </div>
-       </div>
-       <br/>
-       <br/>
-       <div class="row">
-          <div class="col-md-6 text-center">
-             <div class="card">
-                <div class="card-body">
-                   <h3>Adding <strong>Buttons</strong></h3>
-                   <p>Quickly add buttons to your page by using the button component in the insert panel. </p>
-                   <button type="button" class="btn btn-info btn-md">Info Button</button>
-                   <button type="button" class="btn btn-success btn-md">Success Button</button>
-                </div>
-             </div>
-          </div>
-          <div class="text-center col-md-6">
-             <div class="card">
-                <div class="card-body">
-                   <h3>Adding <strong>Badges</strong></h3>
-                   <p>Using the insert panel, add badge to your page by using the badge component.</p>
-                   <span class="badge badge-info">Info Badge</span> <span class="badge badge-danger">Danger Badge</span>
-                </div>
-             </div>
-          </div>
-       </div>
-       <br>
-       <hr>
-       <div class="row light">
-          <div class="text-center col-lg-6 offset-lg-3">
-             <h4>Footer </h4>
-             <p>Copyright &copy; 2021 &middot; All Rights Reserved</p>
-          </div>
-       </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a> </div>
+      </div>
+      <br>
+      <br/>
+      <div class="card">
+        <div class="card-header"> Featured </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
     </div>
-	 <script src="index.js"></script>
-  </body>
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-    <script src="js/jquery-3.4.1.min.js"></script>
- 
-    <!-- Include all compiled plugins (below), or include individual files as needed --> 
-    <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap-4.4.1.js"></script>
+    <div class="col-md-4">
+      <div class="card"> <img class="card-img-top" src="resources/images/card-img.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some text to build on the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+        </ul>
+        <div class="card-body"> <a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a> </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="row light">
+    <div class=" col-md-4"> Click here to select this<strong> column.</strong> Always place your content within a column. Columns are indicated by a dashed blue line. </div>
+    <div class="col-md-4 "> You can <strong>resize a column</strong> using the handle on the right. Drag it to increase or reduce the number of columns.</div>
+    <div class="col-md-4 "> You can <strong>offset a column</strong> using the handle on the left. Drag it to increase or reduce the offset. </div>
+  </div>
+  <br/>
+  <br/>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <div class="card">
+        <div class="card-body">
+          <h3>Adding <strong>Buttons</strong></h3>
+          <p>Quickly add buttons to your page by using the button component in the insert panel. </p>
+          <button type="button" class="btn btn-info btn-md">Info Button</button>
+          <button type="button" class="btn btn-success btn-md">Success Button</button>
+        </div>
+      </div>
+    </div>
+    <div class="text-center col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h3>Adding <strong>Badges</strong></h3>
+          <p>Using the insert panel, add badge to your page by using the badge component.</p>
+          <span class="badge badge-info">Info Badge</span> <span class="badge badge-danger">Danger Badge</span> </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="row light">
+    <div class="text-center col-lg-6 offset-lg-3">
+      <h4>Footer </h4>
+      <p>Copyright &copy; 2021 &middot; All Rights Reserved</p>
+    </div>
+  </div>
+</div>
+<script src="index.js"></script>
+</body>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
 </html>
