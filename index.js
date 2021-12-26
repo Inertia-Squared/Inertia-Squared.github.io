@@ -1,16 +1,19 @@
 const canvas = document.getElementById('canvas')
 const c = canvas.getContext('2d')
-const nav = document.getElementById("navigation")
 var width = innerWidth
 var height = innerHeight
 canvas.width = width - width / 8
-canvas.height = height - nav.clientHeight
+canvas.height = height - 56
 var init;
 const spacer = document.getElementById("spacer")
-spacer.height = height - nav.clientHeight
+spacer.height = height - 56
 spacer.width = width - width / 8
+//const arrow = document.getElementById("arrow")
+//arrow.style.top = "200px"
 
-var friction = 0.925
+var particleSize = 35
+var particles = 6
+var friction = 0.945
 class Particle {
   constructor(x, y, rad, col) {
     this.x = x
@@ -24,7 +27,7 @@ class Particle {
 
   draw() {
     c.beginPath()
-    c.arc(this.x, this.y, this.rad, 0, Math.PI * 2, false)
+    c.arc(this.x, this.y, this.rad+5, 0, Math.PI * 2, false)
     c.fillStyle = this.col
     c.fill()
     c.strokeStyle = 'black'
@@ -41,15 +44,57 @@ class Particle {
     this.x += this.xv
     this.y += this.yv
 
-    if (this.x > canvas.width) this.x = 0
-    if (this.x < 0) this.x = canvas.width
-    if (this.y > canvas.height) this.y = 0
-    if (this.y < 0) this.y = canvas.height
+    let stuck = false;
+    if(this.x<0){
+      stuck=true;
+      this.x=0;
+      if(this.wasStuck){
+        this.x=canvas.width;
+        this.wasStuck=false;
+      }
+      this.xv*=-1;
+      this.wasStuck = true;
+      stuck=true;
+    }
+    if(this.x>canvas.width){
+      this.x=canvas.width;
+      if(this.wasStuck){
+        this.x=0;
+        this.wasStuck=false;
+      }
+      this.wasStuck = true;
+      this.xv*=-1;
+      stuck=true;
+    }
+    if(this.y<0){
+      this.y=0;
+      if(this.wasStuck){
+        this.y=canvas.height;
+        this.wasStuck=false;
+      }
+      this.wasStuck = true;
+      this.yv*=-1;
+      stuck=true;
+    }
+    if(this.y>canvas.height){
+      if(this.wasStuck){
+        this.y=0;
+        this.wasStuck=false;
+      }else{
+        this.y=canvas.height;
+      }
+      this.wasStuck = true;
+      this.yv*=-1;
+      stuck=true;
+    }
+    if(!stuck){
+      this.wasStuck = false;
+    }
 
     part.forEach(p => this.doInteraction(p))
 
-    this.xv += ExtraVec.x / 5
-    this.yv += ExtraVec.y / 5
+    this.xv += ExtraVec.x / (5.1*friction*friction)
+    this.yv += ExtraVec.y / (5.1*friction*friction)
 
     this.xv *= friction
     this.yv *= friction
@@ -57,30 +102,39 @@ class Particle {
 
   doInteraction(p) {
     let dist = distance(this.x, this.y, p.x, p.y)
-    if (dist < this.rad / 2) return
+    if (dist < this.rad/2) return
 
     let vec = Vector2.sub(this.x, this.y, p.x, p.y).norm()
 
-    this.xv -= vec.x * 90 / dist
-    this.yv -= vec.y * 90 / dist
-    this.xv += vec.x * 90 * (this.rad * sqrtl) / (dist * dist)
-    this.yv += vec.y * 90 * (this.rad * sqrtl) / (dist * dist)
+    this.xv -= vec.x * this.rad * 2.3 / dist
+    this.yv -= vec.y * this.rad * 2.3 / dist
+    this.xv += vec.x * 8100 / (dist * dist)
+    this.yv += vec.y * 8100 / (dist * dist)
   }
+	
+	setSize(amt){
+		this.rad = amt
+	}
 
 }
 
-var sqrtl = Math.sqrt(6)
-document.addEventListener("click", () => {
-  if (part.length <= 36) {
-    part.push(new Particle(Math.random() * innerWidth, Math.random() * innerHeight, 25, 'blue'))
-    friction -= 0.0032
-    sqrtl = Math.sqrt(part.length / 1.25)
+//  for (let i = 0; i < particles; i++) {
+//    part.push(new Particle(Math.random() * innerWidth, Math.random() * innerHeight, particleSize, 'blue'))
+//  }
+document.addEventListener("click", (event) => {
+	particleSize-=0.25;
+  if (particleSize >= 19.5) {
+	part.forEach(p => p.setSize(particleSize))
+    part.push(new Particle(event.clientX-width/16, event.clientY-25-particleSize, particleSize, 'blue'))
+    friction -= 0.002
+
   } else {
-    for (let i = 0; i < 31; i++) {
+    for (let i = 0; i < 62; i++) {
       part.pop()
-      friction += 0.0032
+      friction += 0.002
     }
-    sqrtl = Math.sqrt(part.length / 1.25)
+	particleSize = 35
+	part.forEach(p => p.setSize(particleSize))
   }
 });
 
@@ -123,9 +177,15 @@ class Vector2 {
 
 var part = [];
 if (!init) {
+  width = innerWidth
+  height = innerHeight
+  canvas.width = width - width / 8
+  canvas.height = height - 56
+  spacer.height = height - 56
+  spacer.width = width - width / 8
   init = true;
-  for (let i = 0; i < 6; i++) {
-    part.push(new Particle(Math.random() * innerWidth, Math.random() * innerHeight, 25, 'blue'))
+  for (let i = 0; i < particles; i++) {
+    part.push(new Particle(Math.random() * innerWidth, Math.random() * innerHeight, particleSize, 'blue'))
   }
 }
 
@@ -137,18 +197,59 @@ var ExtraVec = new Vector2(0, 0)
 document.addEventListener("mousemove", () => {
   mouseX = event.clientX
   mouseY = event.clientY
-  ExtraVec = Vector2.sub(mouseX, mouseY, lastX, lastY).lim(25)
+  ExtraVec = Vector2.sub(mouseX, mouseY, lastX, lastY).lim(36)
 });
 
 window.addEventListener('resize', function () {
   width = innerWidth
   height = innerHeight
   canvas.width = width - width / 8
-  canvas.height = height - nav.clientHeight
-  spacer.height = height - nav.clientHeight
+  canvas.height = height - 56
+  spacer.height = height - 56
   spacer.width = width - width / 8
 });
 
+$('#collapseOne').on('show.bs.collapse', function () {
+  let animated = document.getElementById("accImg1")
+  animated.classList.remove('rotateUnflip')
+	animated.offsetWidth
+  animated.classList.add('rotateFlip')
+})
+
+$('#collapseOne').on('hide.bs.collapse', function () {
+  let animated = document.getElementById("accImg1")
+  animated.classList.remove('rotateFlip')
+	animated.offsetWidth
+  animated.classList.add('rotateUnflip')
+})
+
+$('#collapseTwo').on('show.bs.collapse', function () {
+  let animated = document.getElementById("accImg2")
+  animated.classList.remove('rotateUnflip')
+	animated.offsetWidth
+  animated.classList.add('rotateFlip')
+})
+
+$('#collapseTwo').on('hide.bs.collapse', function () {
+  let animated = document.getElementById("accImg2")
+  animated.classList.remove('rotateFlip')
+	animated.offsetWidth
+  animated.classList.add('rotateUnflip')
+})
+
+$('#collapseThree').on('show.bs.collapse', function () {
+  let animated = document.getElementById("accImg3")
+  animated.classList.remove('rotateUnflip')
+	animated.offsetWidth
+  animated.classList.add('rotateFlip')
+})
+
+$('#collapseThree').on('hide.bs.collapse', function () {
+  let animated = document.getElementById("accImg3")
+  animated.classList.remove('rotateFlip')
+	animated.offsetWidth
+  animated.classList.add('rotateUnflip')
+})
 
 function update() {
   c.clearRect(0, 0, canvas.width, canvas.height)

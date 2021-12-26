@@ -5,15 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home</title>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
 <link href="webfonts/Game_Of_Squids/stylesheet.css" rel="stylesheet" type="text/css">
 <link href="webfonts/OpenSans_Regular/stylesheet.css" rel="stylesheet" type="text/css">
 <link href="webfonts/BebasNeue_Regular/stylesheet.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css">
 </head>
 
 <body style="background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
@@ -35,99 +34,119 @@
   </div>
   <canvas id="canvas" style="position: absolute; z-index: 1; outline: 3px solid #343A40"></canvas>
   <canvas id="spacer" style="background-color: #121B25"></canvas>
+  <div id="arrow" class="arrow bounce" style="position: absolute; left:50%; top:100; z-index: 999;"> <a class="btn fa fa-arrow-down fa-2x" style="color: white;" href="#projects"><img src="resources/images/arrows.svg" width="32" height="64" style="transform: scaleY(-1); position: absolute; left: -16px; top: -64px"></a> </div>
 </div>
 <div class="jumbotron jumbotron-fluid text-center" id="canvasSpacer">
   <hr class="my-4">
-  <p style="font-family: 'Open Sans'; font-style: normal; font-weight: 400;">Hi there! I'm a programming enthusiast who lives in NSW, Australia. If you want to know more about who I am and what I do, you're at the right place!&nbsp;</p>
-  <p class="lead"> <a class="btn btn-primary btn-lg" href="about.html" role="button">More About Me</a> </p>
+  <p style="font-family: 'Open Sans'; font-style: normal; font-weight: 400;">Hi there! I'm a programming enthusiast who lives in NSW, Australia. If you want to know about who I am and what I do, you've come to the right place!&nbsp;</p>
+  <p class="lead"> <a class="btn btn-primary btn-lg hover-animated" href="about.html" role="button">More About Me</a> </p>
 </div>
-<div class="container"> <br>
+<div class="container" id="projects"> <br>
   <hr>
   <br>
-  <div class="row">
+  <div class="row car">
     <div class="col-md-4">
-      <div class="card"> <img class="card-img-top" src="resources/images/mandelbrot.png" alt="Card image cap">
-        <div class="card-body">
-          <h4 class="card-title">Rasterising the Mandelbrot Set</h4>
+      <div class="card hover-animated"><a href="https://github.com/iGamingMango/complexFractals" target="_blank"><img class="card-img-top" src="resources/images/mandelbrot.png" alt="Card image cap"></a>
+        <div class="card-body context-menu">
+          <h4 class="card-title">Rasterising Mandelbrot</h4>
           <p class="card-text">This Java project was developed for a school assignment on fractals. The program can raster a variety of recursive formulas on the complex plane, generating gorgeous fractals.</p>
           <br>
-          <a href="https://github.com/iGamingMango/complexFractals" class="btn btn-primary">See the project on GitHub</a> </div>
+          <br>
+          <a href="https://github.com/iGamingMango/complexFractals" class="btn btn-primary" target="_blank">Project GitHub</a> </div>
       </div>
     </div>
     <div class="col-md-4">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a> </div>
+          <h5 class="card-title">Latest Projects</h5>
+          <p class="card-text">As of late I have been working on a variety of projects, the projects in this section are some of my more successful prototypes.</p>
+          <a href="https://github.com/iGamingMango" class="card-link">My Github</a> <a href="#" class="card-link">Full Portfolio</a> </div>
       </div>
       <br>
       <br/>
       <div class="card">
-        <div class="card-header"> Featured </div>
+        <div class="card-header">Common Questions </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Vestibulum at eros</li>
+          <div class="accordion" id="accordionExample">
+  <div class="card hover-animated">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          How many projects do you have? <img id="accImg1" src="resources/images/arrow.png" width="32">
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        The short answer - A lot.
+		  <br><br>
+		  The long answer is that I am a big experimenter, I've made many small projects based on what interested me at the time. I tend to have several gigabytes of unfinished prototypes lying around on my hard drive at any given moment. Because of this I have many, MANY short-term projects which I have used to build up my experience and knowledge for all aspects of development around the stack. 
+      </div>
+    </div>
+  </div>
+  <div class="card hover-animated">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          What languages do you code in? <img id="accImg2" src="resources/images/arrow.png" width="32">
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        I have the most experience with Java, though I also have the HTML, JS, and CSS skills necessary to program this website. I have been recently looking into expanding my horizons with Python and Lua, though practise of those languages is on and off. I am also learning a few variants of C in the University course I am currently enrolled in.
+      </div>
+    </div>
+  </div>
+  <div class="card hover-animated">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Can you help me with X project? <img id="accImg3" src="resources/images/arrow.png" width="32">
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        While it will vary from case-to-case, I'm usually glad to help out any fellow devs in my free time! Feel free to add me on Discord (Inertia#7747) if you'd like some help or advice on a project ^-^<br><br>If you're looking to employ my help for a full-time position, we can discuss potential arrangements via <a href="mailto:ojmiddlet@gmail.com">my Email.</a>
+      </div>
+    </div>
+  </div>
+</div>
         </ul>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card"> <img class="card-img-top" src="resources/images/card-img.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some text to build on the card's content.</p>
+      <div class="card hover-animated"><a href="https://github.com/iGamingMango/ChemBot" target="_blank"><img class="card-img-top" src="resources/images/chemDemo.png" alt="Card image cap"></a>
+        <div class="card-body context-menu">
+          <h5 class="card-title">School Study Powered by Discord</h5>
+          <p class="card-text">ChemistryBot is a dynamic software with discord integration that allows students to study chemistry with their friends. Includes leaderboards and keyword-based extended response evaluation!</p>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-        </ul>
-        <div class="card-body"> <a href="#" class="card-link">Card link</a> <a href="#" class="card-link">Another link</a> </div>
+        <br>
+        <div class="card-body"> <a href="https://github.com/iGamingMango/ChemBot" style="margin-right: 25px; margin-bottom: 5px" class="btn btn-primary btn-md" target="_blank">Project GitHub</a><a style="white-space: nowrap" href="https://discord.com/oauth2/authorize?client_id=802009819232862270&scope=bot&permissions=0" target="_blank">Add to your server</a> </div>
       </div>
     </div>
   </div>
   <br/>
   <br/>
-  <div class="row light">
-    <div class=" col-md-4"> Click here to select this<strong> column.</strong> Always place your content within a column. Columns are indicated by a dashed blue line. </div>
-    <div class="col-md-4 "> You can <strong>resize a column</strong> using the handle on the right. Drag it to increase or reduce the number of columns.</div>
-    <div class="col-md-4 "> You can <strong>offset a column</strong> using the handle on the left. Drag it to increase or reduce the offset. </div>
-  </div>
   <br/>
   <br/>
-  <div class="row">
-    <div class="col-md-6 text-center">
-      <div class="card">
-        <div class="card-body">
-          <h3>Adding <strong>Buttons</strong></h3>
-          <p>Quickly add buttons to your page by using the button component in the insert panel. </p>
-          <button type="button" class="btn btn-info btn-md">Info Button</button>
-          <button type="button" class="btn btn-success btn-md">Success Button</button>
-        </div>
-      </div>
-    </div>
-    <div class="text-center col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <h3>Adding <strong>Badges</strong></h3>
-          <p>Using the insert panel, add badge to your page by using the badge component.</p>
-          <span class="badge badge-info">Info Badge</span> <span class="badge badge-danger">Danger Badge</span> </div>
-      </div>
-    </div>
-  </div>
-  <br>
   <hr>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <div class="row light">
-    <div class="text-center col-lg-6 offset-lg-3">
-      <h4>Footer </h4>
-      <p>Copyright &copy; 2021 &middot; All Rights Reserved</p>
+    <div id="footer" class="text-center col-lg-6 offset-lg-3">
+      <h4>You're at the bottom of the Page, Welcome!</h4>
+      <p>Copyright &copy; 2021 Oliver Middleton &middot; All Rights Reserved</p>
     </div>
   </div>
 </div>
-<script src="index.js"></script>
 </body>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap-4.4.1.js"></script>
+<script src="index.js"></script>
 </html>
