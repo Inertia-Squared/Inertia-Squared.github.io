@@ -13,6 +13,17 @@ html{
 	scroll-behavior: smooth;
 }
 
+.no-outline:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.sideText{
+	overflow: hidden; 
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
 .context-menu{
 	cursor: context-menu;
 }
@@ -28,10 +39,22 @@ html{
 	margin-right: 8px;
 }
 
+.light{
+	color: aliceblue;
+}
+
+.card-text{
+	font-family: "Open Sans";
+}
+
+.list-group-item{
+	font-family: "Open Sans";
+}
 
 .arrow {
   text-align: center;
 }
+
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
@@ -68,9 +91,66 @@ html{
 	100%{transform: rotate(180deg)}
 }
 
+.fade{
+	opacity: 1;
+}
 
-.light{
-	color: aliceblue;
+.fade-load-0{
+  opacity: 0;
+  -moz-animation: fade-in 0.8s linear 0s;
+  -webkit-animation: fade-in 0.8s linear 0s;
+  animation: fade-in 0.8s linear 0s;
+	animation-fill-mode: forwards;
+}
+
+.fade-load-2{
+ opacity: 0;
+  -moz-animation: fade-in 0.8s linear 0.2s;
+  -webkit-animation: fade-in 0.8s linear 0.2s;
+  animation: fade-in 0.8s linear 0.2s;
+	animation-fill-mode: forwards;
+}
+
+.fade-load-4{
+ opacity: 0;
+  -moz-animation: fade-in 0.8s linear 0.4s;
+  -webkit-animation: fade-in 0.8s linear 0.4s;
+  animation: fade-in 0.8s linear 0.4s;
+	animation-fill-mode: forwards;	
+}
+
+.fade-load-6{
+ opacity: 0;
+  -moz-animation: fade-in 0.8s linear 0.6s;
+  -webkit-animation: fade-in 0.8s linear 0.6s;
+  animation: fade-in 0.8s linear 0.6s;
+	animation-fill-mode: forwards;	
+}
+
+.fade-load-8{
+ opacity: 0;
+  -moz-animation: fade-in 0.8s linear 0.8s;
+  -webkit-animation: fade-in 0.8s linear 0.8s;
+  animation: fade-in 0.8s linear 0.8s;
+	animation-fill-mode: forwards;	
+}
+
+.fade-load-10{
+ opacity: 0;
+  -moz-animation: fade-in 0.8s linear 1s;
+  -webkit-animation: fade-in 0.8s linear 1s;
+  animation: fade-in 0.8s linear 1s;
+	animation-fill-mode: forwards;	
+}
+
+@keyframes fade-out{
+	0%{opacity: 1}
+	100%{opacity: 0}
+}
+
+@keyframes fade-in{
+	0%{opacity: 0}
+	100%{opacity: 1}
 }
 
 .card-animated{
@@ -80,14 +160,6 @@ html{
       transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
   padding: 2px 10px 2px 5px;
   cursor: pointer;
-}
-
-.card-text{
-	font-family: "Open Sans";
-}
-
-.list-group-item{
-	font-family: "Open Sans";
 }
 
 .card-animated:hover{

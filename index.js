@@ -1,3 +1,6 @@
+//TODO
+//make separate .js file that makes footer have a min Y value that scales with resolution so that footer can't get stuck in the middle of the screen on smaller pages
+
 const canvas = document.getElementById('canvas')
 const c = canvas.getContext('2d')
 var width = innerWidth
@@ -125,7 +128,7 @@ document.addEventListener("click", (event) => {
 	particleSize-=0.25;
   if (particleSize >= 19.5) {
 	part.forEach(p => p.setSize(particleSize))
-    part.push(new Particle(event.clientX-width/16, event.clientY-25-particleSize, particleSize, 'blue'))
+    part.push(new Particle(event.clientX-width/16, scrollY+event.clientY-25-particleSize, particleSize, 'blue'))
     friction -= 0.002
 
   } else {
@@ -207,6 +210,39 @@ window.addEventListener('resize', function () {
   canvas.height = height - 56
   spacer.height = height - 56
   spacer.width = width - width / 8
+});
+
+$(window).on("load",function() {
+    function fade() {
+        var animation_height = $(window).innerHeight() * 0.25;
+        var ratio = Math.round( (1 / animation_height) * 10000 ) / 10000;
+
+        $('.fade').each(function() {
+
+            var objectTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).innerHeight();
+
+            if ( objectTop < windowBottom ) {
+                if ( objectTop < windowBottom - animation_height ) {
+                    $(this).css( {
+                        transition: 'opacity 0.1s linear',
+                        opacity: 1
+                    } );
+
+                } else {
+                    $(this).css( {
+                        transition: 'opacity 0.25s linear',
+                        opacity: (windowBottom - objectTop) * ratio
+                    } );
+                }
+            } else {
+                $(this).css( 'opacity', 0 );
+            }
+        });
+    }
+    $('.fade').css( 'opacity', 0 );
+    fade();
+    $(window).scroll(function() {fade();});
 });
 
 $('#collapseOne').on('show.bs.collapse', function () {

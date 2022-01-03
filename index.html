@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
 </head>
 
-<body style="background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
+<body style="background-color: #08111a; background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
 
 <!-- Universal Navbar Code -->
 <div id="navigation"></div>
@@ -28,9 +28,9 @@
 
 <div style="text-align: center">
   <div id="canvasText" style="position: absolute;left: 9%; margin: 0 auto"> <br>
-    <h1 id="tx" style="overflow: visible; color: #6C747C; text-shadow: 3px 3px #343A40; font-size: 7.5vw; font-family: 'Game Of Squids';">Oliver Middleton</h1>
-    <h2 style="color: #4F575E; font-style: italic; font-size: 3.1vw; font-family: 'BebasNeue Regular';">Programmer, Maths Nerd &amp; Mango Enjoyer</h2>
-    <h5 style="color: #4F575E; text-shadow: 1px 1px #1A1F24; font-size: 2vw; font-style: normal; font-family: 'BebasNeue Regular'; font-weight: 400;" id="clickme">(click somewhere!)</h5>
+    <h1 id="tx" class="fade-load-2" style="overflow: visible; color: #6C747C; text-shadow: 3px 3px #343A40; font-size: 7.5vw; font-family: 'Game Of Squids';">Oliver Middleton</h1>
+    <h2 class="fade-load-4" style="color: #4F575E; font-style: italic; font-size: 3.1vw; font-family: 'BebasNeue Regular';">Programmer, Maths Nerd &amp; Mango Enjoyer</h2>
+    <h5 class="fade-load-6" style="color: #4F575E; text-shadow: 1px 1px #1A1F24; font-size: 2vw; font-style: normal; font-family: 'BebasNeue Regular'; font-weight: 400;" id="clickme">(click somewhere!)</h5>
   </div>
   <canvas id="canvas" style="position: absolute; z-index: 1; outline: 3px solid #343A40"></canvas>
   <canvas id="spacer" style="background-color: #121B25"></canvas>
@@ -45,7 +45,7 @@
   <hr>
   <br>
   <div class="row car">
-    <div class="col-md-4">
+    <div class="col-md-4 fade">
       <div class="card hover-animated"><a href="https://github.com/iGamingMango/complexFractals" target="_blank"><img class="card-img-top" src="resources/images/mandelbrot.png" alt="Card image cap"></a>
         <div class="card-body context-menu">
           <h4 class="card-title">Rasterising Mandelbrot</h4>
@@ -73,7 +73,7 @@
   <div class="card hover-animated">
     <div class="card-header" id="headingOne">
       <h2 class="mb-0">
-        <button class="btn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+        <button class="btn btn-block collapsed no-outline" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
           How many projects do you have? <img id="accImg1" src="resources/images/arrow.png" width="32">
         </button>
       </h2>
@@ -90,7 +90,7 @@
   <div class="card hover-animated">
     <div class="card-header" id="headingTwo">
       <h2 class="mb-0">
-        <button class="btn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <button class="btn btn-block text-center collapsed no-outline" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           What languages do you code in? <img id="accImg2" src="resources/images/arrow.png" width="32">
         </button>
       </h2>
@@ -104,7 +104,7 @@
   <div class="card hover-animated">
     <div class="card-header" id="headingThree">
       <h2 class="mb-0">
-        <button class="btn btn-block text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <button class="btn btn-block text-center collapsed no-outline" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Can you help me with X project? <img id="accImg3" src="resources/images/arrow.png" width="32">
         </button>
       </h2>
@@ -120,7 +120,7 @@
       </div>
 		<br>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 fade">
       <div class="card hover-animated"><a href="https://github.com/iGamingMango/ChemBot" target="_blank"><img class="card-img-top" src="resources/images/chemDemo.png" alt="Card image cap"></a>
         <div class="card-body context-menu">
           <h5 class="card-title">School Study Powered by Discord</h5>
