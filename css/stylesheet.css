@@ -18,14 +18,33 @@ html{
 	box-shadow: none;
 }
 
+.vanish-xl{}
+
+.flex-fill {
+   flex:1 1 auto;
+}
+
+.h4-small{
+	font-size: 1.4rem;
+	margin-top: 5px; 
+}
+
 .sideText{
-	overflow: hidden; 
+	overflow: hidden;
 	padding-top: 14px;
 	padding-bottom: 14px;
 }
 
+.up-1{
+	margin-top: -1px;
+}
+
 .context-menu{
 	cursor: context-menu;
+}
+
+.no-overflow{
+	text-overflow: clip;
 }
 
 .list-subtext{

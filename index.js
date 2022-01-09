@@ -6,11 +6,12 @@ const c = canvas.getContext('2d')
 var width = innerWidth
 var height = innerHeight
 canvas.width = width - width / 8
-canvas.height = height - 56
+canvas.height = height - 200
 var init;
 const spacer = document.getElementById("spacer")
-spacer.height = height - 56
+spacer.height = height - 200
 spacer.width = width - width / 8
+const topMob = document.getElementById("topMobile")
 //const arrow = document.getElementById("arrow")
 //arrow.style.top = "200px"
 
@@ -183,8 +184,8 @@ if (!init) {
   width = innerWidth
   height = innerHeight
   canvas.width = width - width / 8
-  canvas.height = height - 56
-  spacer.height = height - 56
+  canvas.height = height - 200
+  spacer.height = height - 200
   spacer.width = width - width / 8
   init = true;
   for (let i = 0; i < particles; i++) {
@@ -207,9 +208,11 @@ window.addEventListener('resize', function () {
   width = innerWidth
   height = innerHeight
   canvas.width = width - width / 8
-  canvas.height = height - 56
-  spacer.height = height - 56
+  canvas.height = height - 200
+  spacer.height = height - 200
   spacer.width = width - width / 8
+  if(width<992 && !topMob.classList.contains("order-first")){topMob.classList.add("order-first")}
+  if(width>=992 && topMob.classList.contains("order-first")){topMob.classList.remove("order-first")}
 });
 
 $(window).on("load",function() {

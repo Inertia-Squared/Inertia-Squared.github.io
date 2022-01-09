@@ -11,8 +11,9 @@
 <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
 </head>
 
-<body style="background-color: #08111a; background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
-<!-- Universal Navbar Code -->
+<body class="d-flex flex-column min-vh-100" style="background-color: #08111a; background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
+<main class="flex-fill">
+	<!-- Universal Navbar Code -->
 <div id="navigation" style="width: auto"></div>
 <script>
 		$(function(){
@@ -34,53 +35,60 @@
 <br>
 <br>
 <br>
-<div class="row container-fluid">
-  <div class="col-lg-3 text-left container-fluid">
+<div class="row container-fluid" style="margin-left: 0px">
+  <div class="col-xl-3 text-left container-fluid">
     <div class="list-group list-group-flush"> <br>
       <div class="list-group-item card card-animated d-flex fade-load-0"><a class="btn no-outline" href="https://discord.com" target="_blank"><img src="resources/images/flaticon/png/003-discord.png" width="64px" alt="Discord" class="float-left">
         <div class="sideText">
-          <h4>Inertia<wbr>#7747</h4>
+          <h4 class="h4-small">Inertia<wbr>#7747<img src="resources/images/link out.png" class="float-right up-1 vanish-xl" width="32"></h4>
         </div>
         </a></div>
       <br>
 		
       <div class="list-group-item card card-animated d-flex fade-load-2"><a class="btn no-outline" href="https://github.com/iGamingMango" target="_blank"><img src="resources/images/flaticon/png/004-github.png" width="64px" alt="GitHub" class="float-left">
         <div class="sideText align-self-center">
-		  <h4>iGaming<wbr>Mango</h4>
+		  <h4 class="h4-small">Inertia<img src="resources/images/link out.png" class="float-right up-1 vanish-xl" width="32"></h4>
         </div>
         </a></div>
 		<br>
       <div class="list-group-item card card-animated d-flex fade-load-4"><a class="btn no-outline" href="https://www.youtube.com/channel/UC0opa9T4DgNbYIV_iJYIE6w" target="_blank"><img src="resources/images/flaticon/png/002-youtube.png" width="64px" alt="YouTube" class="float-left">
         <div class="sideText align-self-center">
-          <h4>Inertia Squared</h4>
+          <h4 class="h4-small">Inertia Squared<img src="resources/images/link out.png" class="float-right up-1 vanish-xl" width="32"></h4>
         </div>
         </a></div>
 		
     </div>
   </div>
   <br>
-  <div class="col-lg text-left container-fluid card" style="padding: 10px; margin: 10px" id="topMobile">
-	  Placeholder Text - Some cool info and visuals will go here later!
+  <div class="col-xl text-left container-fluid card align-self-center" style="padding: 15px; margin: 15px; margin-top: -7px" id="topMobile">
+	  <div class="card d-flex flex-row"><img class="float-left img-thumbnail" src="resources/images/social-media-g0d33cd066_1280-cropped.jpg" style="width: 250px; height: 229px"  alt="Card image cap">
+        <div class="card-body context-menu sideText container-fluid">
+          <h4 class="">Contact Me</h4>
+          <p class="card-text">These are my main socials where I communicate with others. For Business matters, please contact me through my email at <a href="mailto:ojmiddlet@gmail.com">ojmiddlet@gmail.com</a>. For personal matters, please contact me on either Discord or Instagram.</p>
+          <br>
+          <br>
+          </div>
+      </div>
   </div>
   <br>
-  <div class="col-lg-3 text-left container-fluid">
+  <div class="col-xl-3 text-left container-fluid">
     <div class="list-group list-group-flush"> <br>
       <div class="list-group-item card card-animated d-flex fade-load-6"><a class="btn no-outline" href="mailto:ojmiddlet@gmail.com" target="_blank"><img src="resources/images/flaticon/png/006-email.png" width="64px" alt="Email" class="float-left">
         <div class="sideText">
-          <h4>ojmiddlet@<wbr>gmail.com</h4>
+          <h4 class="h4-small">ojmiddlet@<wbr>gmail<wbr>.com</h4>
         </div>
         </a></div>
       <br>
 		
-      <div class="list-group-item card card-animated d-flex fade-load-8"><a class="btn no-outline" href="https://www.twitch.tv/igamingmango" target="_blank"><img src="resources/images/flaticon/png/001-twitch.png" width="64px" alt="Twitch" class="float-left">
+      <div class="list-group-item card card-animated d-flex fade-load-8"><a class="btn no-outline" href="https://www.instagram.com/oliverinthemiddle/" target="_blank"><img src="resources/images/flaticon/png/007-instagram.png" width="64px" alt="Instagram" class="float-left">
         <div class="sideText align-self-center">
-          <h4>iGaming<wbr>Mango</h4>
+          <h4 class="h4-small">Oliver Middleton<img src="resources/images/link out.png" class="float-right up-1 vanish-xl" width="32"></h4>
         </div>
         </a></div>
 		<br>
       <div class="list-group-item card card-animated d-flex fade-load-10"><a class="btn no-outline" href="https://twitter.com/Inertia_Squared" target="_blank"><img src="resources/images/flaticon/png/005-twitter.png" width="64px" alt="Twitter" class="float-left">
         <div class="sideText align-self-center">
-          <h4>@Inertia_<wbr>Squared</h4>
+          <h4 class="h4-small">@Inertia_<wbr>Squared<img src="resources/images/link out.png" class="float-right up-1 vanish-xl" width="32"></h4>
         </div>
         </a></div>
 		<br><br>
@@ -88,12 +96,13 @@
   </div>
 </div>
 <br>
-<div class="row light container-fluid">
-  <div class="text-center col-lg-6 offset-lg-3">
+</main>
+<footer class="row light mt-auto py-3">
+  <div class="container text-center col-lg-6 offset-lg-3">
     <h4>You're at the bottom of the Page, Welcome!</h4>
     <p>Copyright &copy; 2021 Oliver Middleton &middot; All Rights Reserved &middot; Social icons made by <a href="https://www.flaticon.com/authors/riajulislam" title="riajulislam">riajulislam</a> from <a href="https://www.flaticon.com/" title="Flaticon">flaticon.com</a></p>
   </div>
-</div>
+</footer>
 </body>
 <script src="js/contact.js"></script>
 </html>
