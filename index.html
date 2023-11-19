@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
 </head>
 
-<body style="background-color: #08111a; background-image: url('resources/particleExports/ParticleLoopCompressed.gif'),url('resources/particleExports/ParticleLoopUltraCompressed.gif'); background-size: 720px;">
+<body style="background-color: #08111a; background-image: url('resources/particleExports/ParticleLoopCompressed.gif'); background-size: 720px;">
 
 <!-- Universal Navbar Code -->
 <div id="navigation"></div>
@@ -23,7 +23,7 @@
 		$(function(){
 			$("#navigation").load("nav.html");
 		});
-	</script> 
+	</script>
 <!-- End of Universal Navbar Code -->
 
 <div style="text-align: center">
@@ -34,35 +34,30 @@
   </div>
   <canvas id="canvas" style="position: absolute; z-index: 1; outline: 3px solid #343A40"></canvas>
   <canvas id="spacer" style="background-color: #121B25"></canvas>
-  <div id="arrow" class="arrow bounce" style="position: absolute; left:50%; top:100; z-index: 999;"> <a class="btn fa fa-arrow-down fa-2x" style="color: white;" href="#projects"><img src="resources/images/arrows.svg" width="32" height="64" style="transform: scaleY(-1); position: absolute; left: -16px; top: -64px"></a> </div>
+  <div id="arrow" class="arrow bounce" style="position: absolute; left:50%; z-index: 999;"> <a class="btn fa fa-arrow-down fa-2x" style="color: white;" href="#projects"><img src="resources/images/arrows.svg" width="32" height="64" style="transform: scaleY(-1); position: absolute; left: -16px; top: -64px"></a> </div>
 </div>
 <div class="jumbotron jumbotron-fluid text-center" id="canvasSpacer">
   <hr class="my-4">
   <p style="font-family: 'Open Sans'; font-style: normal; font-weight: 400; padding: 10px">Hi there! I'm a programming enthusiast who lives in NSW, Australia. If you want to know about who I am and what I do, you've come to the right place!&nbsp;</p>
   <p class="lead"> <a class="btn btn-primary btn-lg hover-animated" href="about.html" role="button">More About Me</a> </p>
 </div>
-<div class="container" id="projects"> <br>
-  <hr>
-  <br>
-  <div class="row car">
+<div class="container" id="projects" style="padding: 40px">
+  <div class="row car" style="margin-bottom: 100px">
     <div class="col-lg-4 fade">
-      <div class="card hover-animated"><a href="https://github.com/iGamingMango/complexFractals" target="_blank"><img class="card-img-top" src="resources/images/mandelbrot.png" alt="Card image cap"></a>
+      <div class="card hover-animated"><a href="https://github.com/Inertia-Squared/PSA_OM" target="_blank"><img class="card-img-top" src="resources/images/WebDemoExample2.png" alt="Example of website booking page"></a>
         <div class="card-body context-menu">
-          <h4 class="card-title">Rasterising Mandelbrot</h4>
-          <p class="card-text">This Java project was developed for a school assignment on fractals. The program can raster a variety of recursive formulas on the complex plane, generating gorgeous fractals.</p>
-          <br>
-          <br>
-          <a href="https://github.com/iGamingMango/complexFractals" class="btn btn-primary" target="_blank">Project GitHub</a> </div>
+          <h4 class="card-title">.NET7 Web Demo</h4>
+          <p class="card-text">This .NET7 Razor Pages project was developed as one of my University projects. The website allows users to create an account, make bookings, manage details, and even view booking statistics.</p>
+          <a href="https://github.com/Inertia-Squared/PSA_OM" class="btn btn-primary" style="margin: 5px 5px -10px 0px" target="_blank">Project GitHub</a> </div>
       </div>
-		<br>
     </div>
-	  
+
     <div class="col-lg-4" id="topMobile">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Latest Projects</h5>
           <p class="card-text">As of late I have been working on a variety of projects, the projects in this section are some of my more successful prototypes.</p>
-          <a href="https://github.com/iGamingMango" class="card-link">My Github</a> <a href="#" class="card-link">Full Portfolio</a> </div>
+          <a href="https://github.com/Inertia-Squared" class="card-link">My Github</a> <a href="#" class="card-link">Full Portfolio</a> </div>
       </div>
       <br>
       <br/>
@@ -81,9 +76,7 @@
 
     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
       <div class="card-body">
-        The short answer - A lot.
-		  <br><br>
-		  The long answer is that I am a big experimenter, I've made many small projects based on what interested me at the time. I tend to have several gigabytes of unfinished prototypes lying around on my hard drive at any given moment. Because of this I have many, MANY short-term projects which I have used to build up my experience and knowledge for all aspects of development around the stack. 
+        Too many to count! Most of my projects aren't publicly available, but occasionally I publish my code online.
       </div>
     </div>
   </div>
@@ -97,21 +90,7 @@
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        I have the most experience with Java, though I also have the HTML, JS, and CSS skills necessary to program this website. I have been recently looking into expanding my horizons with Python and Lua, though practise of those languages is on and off. I am also learning a few variants of C in the University course I am currently enrolled in.
-      </div>
-    </div>
-  </div>
-  <div class="card hover-animated">
-    <div class="card-header" id="headingThree">
-      <h2 class="mb-0">
-        <button class="btn btn-block text-center collapsed no-outline" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Can you help me with X project? <img id="accImg3" src="resources/images/arrow.png" width="32">
-        </button>
-      </h2>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        While it will vary from case-to-case, I'm usually glad to help out any fellow devs in my free time! Feel free to add me on Discord (Inertia#7747) if you'd like some help or advice on a project ^-^<br><br>If you're looking to employ my help for a full-time position, we can discuss potential arrangements via <a href="mailto:ojmiddlet@gmail.com">my Email.</a>
+        I have experience with Java, C++, C#, R, Python, HTML/CSS, JavaScript, and a variety of shell-based languages.
       </div>
     </div>
   </div>
@@ -121,32 +100,20 @@
 		<br>
     </div>
     <div class="col-lg-4 fade">
-      <div class="card hover-animated"><a href="https://github.com/iGamingMango/ChemBot" target="_blank"><img class="card-img-top" src="resources/images/chemDemo.png" alt="Card image cap"></a>
+      <div class="card hover-animated"><a href="https://github.com/Inertia-Squared/ChemBot" target="_blank"><img class="card-img-top" src="resources/images/chemDemo.png" alt="Card image cap"></a>
         <div class="card-body context-menu">
           <h5 class="card-title">School Study Powered by Discord</h5>
           <p class="card-text">ChemistryBot is a dynamic software with discord integration that allows students to study chemistry with their friends. Includes leaderboards and keyword-based extended response evaluation!</p>
         </div>
-        <br>
-        <div class="card-body"> <a href="https://github.com/iGamingMango/ChemBot" style="margin-right: 25px; margin-bottom: 5px" class="btn btn-primary btn-md" target="_blank">Project GitHub</a><a style="white-space: nowrap" href="https://discord.com/oauth2/authorize?client_id=802009819232862270&scope=bot&permissions=0" target="_blank">Add to your server</a> </div>
+        <div style="margin: 5px 5px 5px 20px;"> <a href="https://github.com/Inertia-Squared/ChemBot" style="margin-right: 20px; margin-bottom: 5px" class="btn btn-primary btn-md" target="_blank">Project GitHub</a><a style="white-space: nowrap" href="https://discord.com/oauth2/authorize?client_id=802009819232862270&scope=bot&permissions=0" target="_blank">Add to your server</a> </div>
       </div>
     </div>
   </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <hr>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <footer class="row light mt-auto py-3">
+
+  <footer class="row light mt-auto py-3" style="horiz-align: center;">
     <div class="text-center col-lg-6 offset-lg-3">
       <h4>You're at the bottom of the Page, Welcome!</h4>
-      <p>Copyright &copy; 2021 Oliver Middleton &middot; All Rights Reserved</p>
+      <p>Copyright &copy; 2023 Oliver Middleton &middot; All Rights Reserved</p>
     </div>
   </footer>
 </div>
